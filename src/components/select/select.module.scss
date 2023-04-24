@@ -1,0 +1,207 @@
+@import "../../styles/mixins";
+
+.select {
+    width: 100%;
+    // background-color: orangered;
+    display: flex;
+    position: relative;
+    align-items: center;
+    // justify-content: center;
+    flex-flow: column;
+    cursor: pointer;
+    margin: 1rem 0;
+
+
+    &__loader{
+        height: 6rem;
+        width: 100%;
+        background-color: var(--color-background-light);
+         position: absolute;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 .4rem 1rem rgba(grey, .1);
+        animation: Fade-in .2s ease-in-out;
+        
+        
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: capitalize;
+        text-align: left;
+
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+
+
+    &__container {
+        width: 100%;
+        position: relative;
+        height: 100%;
+        display: flex;
+
+    }
+
+    &__header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        color: var(--color-gray-400);
+        border-radius: var(--border-radius-input);
+        text-transform: capitalize;
+        overflow: hidden;
+        align-items: center;
+        font-size: 1.2rem;
+        font-weight: 400;
+        padding: 1.25rem 1.4rem;
+        justify-content: space-between;
+        text-align: left;
+
+
+        //  background-color: $white;
+        border: 1px solid var(--color-gray-light);
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
+
+
+        &__value {
+            width: stretch;
+            padding: 1rem 1.4rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+        color: var(--color-gray-400);
+
+            @include respond(tab-port) {
+                font-size: 1.4rem;
+            }
+
+
+        }
+
+        &__icon {
+            color: inherit;
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding:0 1rem;
+            color: var(--color-secondary);
+            justify-content: center;
+            background-color: transparent;
+
+            svg {
+                display: block;
+                margin: 0;
+                color: inherit;
+                transition: .2s ease-in-out;
+                margin-bottom: 0 !important;
+                // path{
+
+                // stroke: currentColor;
+                // }
+
+
+
+            }
+
+            &--active {
+                svg {
+                    transform: rotateZ(-180deg);
+                }
+
+            }
+
+        }
+
+
+    }
+
+    &__list {
+        width: 95%;
+        // margin: 0 auto;
+
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        max-height: 18rem;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-background-light);
+        border-radius: .65rem;
+        overflow: hidden;
+        box-shadow: 0 .4rem 1rem rgba(grey, .1);
+        animation: Fade-in .2s ease-in-out;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+
+        &__container {
+            position: relative;
+            width: 100%;
+            display: block;
+            padding-top: 2px;
+        }
+
+        
+div{
+    width: 100%;
+}
+        option,
+        &__item,li {
+            padding: 1.5rem;
+            display: block;
+            width: 100%;
+            // background-color: pink;
+            position: relative;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            cursor: pointer;
+            transition: .1s ease-in-out;
+            font-weight: 400;
+            color: var(--color-secondary);
+
+
+            @include respond(tab-port) {
+                font-size: 1.4rem;
+            }
+
+            &:hover {
+                background-color: var(--color-secondary);
+                color: white;
+            }
+
+        }
+
+    }
+
+
+}
+
+@keyframes Fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}

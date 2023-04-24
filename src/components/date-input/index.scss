@@ -1,0 +1,126 @@
+#date {
+
+   & .date {
+      &-pri {
+         &-label {
+            color: var(--color-secondary);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 11px;
+         }
+
+         &-field {
+            display: block;
+            height: 42px;
+            width: 100%;
+            background-color: var(--color-gray-200);
+            border: none;
+            border-radius: 3px;
+            padding: 1em;
+            font-weight: 500;
+            font-size: 12px;
+
+            & input {
+               width: 100%;
+               font-size: 12px;
+               border: none;
+               background-color: transparent;
+               letter-spacing: 1px;
+            }
+
+            &.icon {
+               padding: 0 0 0 2em;
+            }
+         }
+
+         &-icon {
+            position: absolute;
+            bottom: 46%;
+            transform: translate(-40%, 50%);
+            margin-left: 2em;
+
+            & svg,
+            img {
+               width: 18px;
+               margin-right: 2em;
+            }
+
+            & span,
+            i {
+               font-size: 20px;
+            }
+         }
+      }
+   }
+
+   & .date {
+      &-sec {
+         &-label {
+            position: absolute;
+            top: 15%;
+            font-size: 11px;
+            color: var(--color-gray-300);
+            padding: 0 1.2em 0 1.1em;
+
+            &.icon {
+               padding-left: 4em;
+
+               @media (max-width:500px) {
+                  padding-left: 3.5em;
+               }
+            }
+         }
+
+         &-field {
+            display: block;
+            height: 53px;
+            width: 100%;
+            background-color: var(--color-gray-200);
+            border: none;
+            border-radius: 5px;
+            padding: 2.5em 1.2em 0.5em 1.2em;
+
+            & input {
+               width: 100%;
+               font-weight: 600;
+               border: none;
+               background-color: transparent;
+               letter-spacing: 1px;
+               @media (max-width:500px) {
+                  padding-left: 1em;
+                  padding-top: 0.5em;
+               }
+            }
+
+            @media (min-width:900px) {
+               height: 60px;
+               padding: 2em 1.2em 0.5em 1em;
+               font-weight: 600;
+               font-size: 14px;
+            }
+
+            &.icon {
+               padding-left: 3em;
+            }
+         }
+
+         &-icon {
+            position: absolute;
+            // left: 14%;
+            margin-left: 2.5em;
+            bottom: 10%;
+            transform: translate(-50%, -10%);
+
+            & svg,
+            img {
+               width: 18px;
+            }
+
+            & span,
+            i {
+               font-size: 20px;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,74 @@
+#table {
+   width: 100%;
+   overflow: auto;
+
+   & table {
+      width: 100%;
+      position: relative;
+      padding: 0 1.5em;
+      border-spacing: 0;
+      background-color: white;
+      border-radius: 5px;
+      overflow-x: auto;
+
+      @media (max-width:1000px) {
+         min-width: 150rem;
+         font-size: 1.4rem;
+      }
+
+      @media (max-width:500px) {
+         min-width: 100rem;
+         font-size: 1.4rem;
+      }
+
+      & td,
+      th {
+         text-align: left;
+         background-color: white;
+         padding: 2em 1em;
+         border-spacing: 0;
+         font-size: 12px;
+         font-weight: 300;
+      }
+
+      & th {
+         border-bottom: 1px solid #99999945;
+         font-weight: 500;
+      }
+   }
+
+   &.stripped {
+      & table {
+         background-color: transparent;
+         border-spacing: 0em 1.5em;
+
+         & thead,
+         tbody {
+
+            & tr {
+               background-color: transparent !important;
+
+               & th {
+                  background-color: transparent !important;
+                  padding: 1em;
+
+
+               }
+
+               & td {
+                  padding: 1em;
+
+                  & .btn {
+                     padding: 0;
+                     height: 30px;
+                     width: 50px;
+                     font-size: 10px;
+                  }
+               }
+            }
+
+         }
+      }
+
+   }
+}
